@@ -29,7 +29,7 @@ $(function () {
             password: $("#form_reg [name=password]").val()
 
         };
-        $.post("http://ajax.frontend.itheima.net/api/reguser", data,
+        $.post("/api/reguser", data,
             function (res) {
                 console.log(res)
                 if (res.status !== 0) {
@@ -45,7 +45,7 @@ $(function () {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: " http://ajax.frontend.itheima.net/api/login",
+            url: "/api/login",
             data: $(this).serialize(),
             success: function (res) {
                 console.log(res)
